@@ -21,7 +21,7 @@ namespace G9E1
                 {
                     try
                     {
-                        Console.WriteLine("Para dar una mayor probabilidad de que aparezca 8.5, ingrese el valor minimo (entre 0 a 100) para el numero aleatorio...");
+                        Console.WriteLine("Para dar una mayor probabilidad de que aparezca 8.5, ingrese el valor minimo (entre 0 a 85) para el numero aleatorio...");
                         min = int.Parse(Console.ReadLine());
                         error = false;
                     }
@@ -37,15 +37,15 @@ namespace G9E1
                 Console.Clear();
                 for (int i = 0; i < 9; i++)
                 {
-                    Grado[i] = double.Parse((ran.Next(min, 100) / 10.00).ToString());
-                    Console.WriteLine("Numero " + (i + 1) + ": " + Grado[i]);
+                    Grado[i] = double.Parse((ran.Next(min, 86) / 10.00).ToString());
+                    Console.WriteLine("Calificacion " + (i + 1) + ": " + Grado[i]);
                     if (Grado[i] == 8.5)
                     {
                         cond++;
                     }
                 }
                 Console.WriteLine("\nEn total, existen " + cond + " notas iguales a 8.5");
-                Console.WriteLine("(de una probabilidad de 1/" + (100 - min) + " que aparezca este numero)");
+                Console.WriteLine("(de una probabilidad de 1/" + (86 - min) + " que aparezca este numero)");
                 Console.WriteLine("Desea repetir el programa de nuevo (te permitiria establecer un nuevo rango de probabilidad)... Y/N");
                 char key = Console.ReadKey().KeyChar;
                 if (key == 'y')
